@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page lukas</title>
+    <script>
+        let punten = prompt("Geef het aantal punten in met 2 cijfers")
+
+        if (punten == null) {
+            document.write("U heeft geannulleerd!");
+        } else if (punten.length == 0) {
+            document.write("U heeft niets ingegeven!");
+        } else if (isNaN(punten) == true) {
+            document.write("Dit is geen nummer!");
+        } else if (punten.length != 2) {
+            document.write("Geef de punten in met 2 cijfers!");
+        } else {
+            if (punten >= 95 && punten <= 100) {
+                document.write("De graad is: A+");
+            } else if (punten > 100) {
+                document.write("Geef een getal in onder 100");
+            } else if (punten >= 90) {
+                document.write("De graad is: A");
+            } else if (punten >= 80) {
+                document.write("De graad is: B");
+            } else if (punten >= 70) {
+                document.write("De graad is: C");
+            } else if (punten >= 60) {
+                document.write("De graad is: D");
+            } else if (punten >= 50) {
+                document.write("De graad is: E");
+            } else if (punten < 0) {
+                document.write("Geef een getal in boven 100");
+            } else {
+                document.write("De graad is: F");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        let getallen = [];
+        let aantal = prompt("hoeveel getallen wil je ingeven");
+        aantal = controleAantal(aantal);
+        if (aantal > 0) {
+            for (let i = 0; i < aantal; i++) {
+                let getal = prompt(`geef getal ${i + 1} in`)
+                vulArray(i, getal);
+            }
+            for (let i = 0; i < getallen.length; i++) {
+                document.write(`${getallen[i]}, `)
+            }
+
+        }
+
+        function controleAantal(ontvangen) {
+            if (ontvangen == null) {
+                document.write("u hebt geannuleerd");
+
+            }
+            else if (ontvangen == 0) {
+                document.write("u hebt niets ingegeven");
+
+            }
+            else if (isNaN(ontvangen) == false) {
+                return ontvangen;
+            }
+            else {
+                document.write("dit is geen correcte ingaven");
+                return 0;
+            }
+
+
+        }
+        function vulArray(index, getal) {
+            let getalVoorArray = controleGetal(getal);
+            getallen[index] = getalVoorArray;
+        }
+
+        function controleGetal(ontvangen) {
+            if (ontvangen == null || ontvangen == 0 || isNaN(ontvangen)) {
+                return "fout";
+            }
+            else {
+                return ontvangen;
+            }
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
